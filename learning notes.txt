@@ -1,0 +1,57 @@
+react learning notes. whence webpage.
+====================================================================
+you can cancel eslint no unused vars by turning this off "'no-unused-vars': 'off'" in eslintrc.cjs in tailwind
+
+=========================================footer===========================================================
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faGooglePlay, faAppStore } from '@fortawesome/free-brands-svg-icons';
+
+const Footer = () => {
+  const footerStyle = {
+    height: '100px', // Adjust the height as needed
+    background: 'linear-gradient(to right, #8B4513, #006400, #00008B)', // Set the background color
+    display: 'flex',
+    justifyContent: 'space-around', // Add space around the icons
+    alignItems: 'center',
+    color: 'white', // Set the text color
+  };
+
+  const iconStyle = {
+    fontSize: '30px', // Adjust the icon size as needed
+    cursor: 'pointer',
+ 
+  };
+
+  const linkStyle = {
+    flex: 0, // Fill the available space evenly
+    textAlign: 'center', // Center the text within the link
+  };
+
+  return (
+    <div className='footer' style={footerStyle}>
+      <a href='https://www.facebook.com' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+        <FontAwesomeIcon icon={faFacebook} style={iconStyle} />
+      </a>
+      <a href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+        <FontAwesomeIcon icon={faLinkedin} style={iconStyle} />
+      </a>
+      <a href='https://www.youtube.com' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+        <FontAwesomeIcon icon={faYoutube} style={iconStyle} />
+      </a>
+      <a href='https://www.yourwebsite.com' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+        {/*<FontAwesomeIcon icon={faGlobe} style={iconStyle} />*/}
+      </a>
+      <a href='https://www.youtube.com' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+        <FontAwesomeIcon icon={faGooglePlay} style={iconStyle} />
+      </a>
+      <a href='https://www.youtube.com' target='_blank' rel='noopener noreferrer' style={linkStyle}>
+        <FontAwesomeIcon icon={faAppStore} style={iconStyle} />
+      </a>
+      <p>&copy; 2024 WhenceFinancialServices</p>
+    </div>
+  );
+};
+
+export default Footer;
