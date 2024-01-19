@@ -8,7 +8,7 @@ import Moreservices from '../Components/Moreservices'
 
 const Homepage = () => {
   return (
-    <Moreservices/>
+    <></>
   )
 }
 
