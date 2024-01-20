@@ -30,32 +30,31 @@ const Faq = () => {
   };
 
   return (
-    <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12" id="faq">
-      <div className="text-center md:w-1/2 mx-auto">
-        <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-sm text-neautralGrey mb-8 md:w-3/4 mx-auto">
-          Find answers to common questions below.
-        </p>
-      </div>
-      <div className="grid lg:grid-cols-1 gap-8">
-        {faqs.map((faq) => (
-          <div key={faq.id} className="border rounded-lg p-4 border-2 ">
-            <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() => toggleFaq(faq.id)}
-            >
-              <FaQuestionCircle className="text-blue-500 mr-2" />
-              <h3 className="text-lg font-medium">{faq.title}</h3>
-              <span>{activeFaq === faq.id ? <FaChevronUp /> : <FaChevronDown />}</span>
+      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12" id="faq">
+        <div className="text-center md:w-1/2 mx-auto">
+          <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-sm text-neautralGrey mb-8 md:w-3/4 mx-auto">
+            Find answers to common questions below.
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-1 gap-8">
+          {faqs.map((faq) => (
+            <div key={faq.id} className="border rounded-lg p-4 border-2 text-center">
+              <div
+                className="flex justify-between items-center cursor-pointer"
+                onClick={() => toggleFaq(faq.id)}
+              >
+                <h3 className="text-lg font-medium">{faq.title}</h3>
+                <span>{activeFaq === faq.id ? <FaChevronUp /> : <FaChevronDown />}</span>
+              </div>
+              {activeFaq === faq.id && <p className="mt-3">{faq.content}</p>}
             </div>
-            {activeFaq === faq.id && <p className="mt-3">{faq.content}</p>}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 export default Faq;

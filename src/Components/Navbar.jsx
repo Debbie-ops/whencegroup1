@@ -38,36 +38,36 @@ const Navbar = () => {
 
   return (
     <header className={`w-full ${isSticky ? 'bg-white' : 'md:bg-transparent'} fixed top-0 left-0 right-0`} style={{ zIndex: 998 }}>
-      <div className="upper-section" style={{ background: 'linear-gradient(to right, orange, green, blue)', padding: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        {/* Logo or image in the top-left corner */}
+      {/*<div className="upper-section" style={{ background: 'linear-gradient(to right, orange, green, blue)', padding: '5px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        
         <img src={logo1} alt="Logo" className="w-15 inline-block items-center" style={{height: '50px'}}/>
 
-        {/* Contact and Email sections */}
+        {/* Contact and Email sections *
         <div className="flex items-end">
           <div className="text-white">
-            {/* Contact icon and text */}
+            {/* Contact icon and text *
             <div className="flex items-center">
               <FaPhone className="mr-2" />
               <span>Contact: + 260 971 089 407</span>
             </div>
 
-            {/* Message icon and text */}
+            {/* Message icon and text *
             <div className="flex items-center">
               <FaEnvelope className="mr-2" />
               <span>Email: info@whencegroup.com</span>
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
 
       <nav
         className={`py-4 lg:px-14 px-4 ${isSticky ? 'top-0 left-0 right-0 border-b bg-white' : ''}`}
         style={{ position: 'relative' }}
       >
         <div className="flex justify-between items-center text-base gap-8">
-          <a href="" className="text-2xl font-semibold flex items-center space-x-3">
+          <a href="" className="text-2xl font-semibold flex items-center space-x-0">
           <img src={logo} alt="Logo" className="w-15 inline-block items-center" style={{height: '30px'}}/>
-            <span className="text-[#263238]">WhenceFinancialServices</span>
+            <span className="text-[#263238] " style={{ fontSize: '1rem' }} >WhenceFinancialServices</span>
           </a>
 
           {/* Large screens */}

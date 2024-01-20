@@ -5,29 +5,28 @@ import { faGooglePlay, faAppStore } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   const footerStyle = {
-    height: '100px', // Adjust the height as needed
-    background: 'linear-gradient(to right, #8B4513, #006400, #00008B)', // Set the background color
+    background: 'linear-gradient(to right, #8B4513, #006400, #00008B)',
     display: 'flex',
-    justifyContent: 'space-around', // Add space around the icons
+    flexDirection: 'column', // Adjusted to column layout for mobile
     alignItems: 'center',
-    color: 'white', // Set the text color
+    color: 'white',
+    padding: '20px', // Added padding for spacing
   };
 
   const iconStyle = {
-    fontSize: '30px', // Adjust the icon size as needed
+    fontSize: '24px', // Adjusted the icon size for mobile
     cursor: 'pointer',
     margin: '0 10px',
- 
   };
 
   const linkStyle = {
-    flex: 0, // Fill the available space evenly
-    textAlign: 'center', // Center the text within the link
+    textAlign: 'center',
+    margin: '10px 0', // Added margin for spacing
   };
 
   return (
     <div className='footer' style={footerStyle}>
-      <div>
+      <div style={linkStyle}>
         <h3>Connect with Us</h3>
         <a href='https://www.facebook.com/whencefinancialservices' target='_blank' rel='noopener noreferrer'>
           <FontAwesomeIcon icon={faFacebook} style={iconStyle} />
@@ -39,7 +38,7 @@ const Footer = () => {
           <FontAwesomeIcon icon={faYoutube} style={iconStyle} />
         </a>
       </div>
-      <div>
+      <div style={linkStyle}>
         <h3>Visit our WithinHere App</h3>
         <a href='https://play.google.com/store/apps/details?id=com.whence.withinhere&pli=1' target='_blank' rel='noopener noreferrer'>
           <FontAwesomeIcon icon={faGooglePlay} style={iconStyle} />

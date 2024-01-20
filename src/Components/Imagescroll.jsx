@@ -40,9 +40,10 @@ const Imagescroll = () => {
 
   const headingStyles = {
     color: '#263238',
-    fontSize: '50px', // Adjusted font size for mobile
+    fontSize: '20px', // Adjusted font size for mobile
     fontWeight: 'bold',
     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+    textAlign: 'center',
   };
 
   return (
