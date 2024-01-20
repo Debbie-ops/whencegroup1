@@ -14,14 +14,15 @@ const Footer = () => {
   };
 
   const iconStyle = {
-    fontSize: '24px', // Adjusted the icon size for mobile
+    fontSize: '20px', // Adjusted the icon size for mobile
     cursor: 'pointer',
     margin: '0 10px',
   };
 
   const linkStyle = {
     textAlign: 'center',
-    margin: '10px 0', // Added margin for spacing
+    margin: '10px 0',
+    fontSize: '12px' // Added margin for spacing
   };
 
   return (
@@ -47,7 +48,9 @@ const Footer = () => {
           <FontAwesomeIcon icon={faAppStore} style={iconStyle} />
         </a>
       </div>
+      <div style={linkStyle}>
       <p>&copy; 2024 WhenceFinancialServices</p>
+      </div>
     </div>
   );
 };

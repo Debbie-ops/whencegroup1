@@ -65,7 +65,7 @@ const Carousel = () => {
   };
 
   return (
-    <div style={{ marginTop: '20px', maxWidth: '1200px', margin: '0 auto' }} id='carousel'>
+    <div style={{ marginTop: '30px', maxWidth: '1200px', margin: '0 auto' }} id='carousel'>
       <h3 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '20px' }}>
          <h2 className='text-4xl text-neutralDGrey font-semibold mb-2'>Beyond the Familiar! </h2>
       </h3>
@@ -81,6 +81,7 @@ const Carousel = () => {
         responsive={responsive}
         autoPlay
         items={items}
+        disableButtonsControls
       />
     </div>
   );
